@@ -40,7 +40,12 @@ export default function AboutUs() {
               </ul>
             </Col>
             <Col className="text-center about-img" lg={4} md={12}>
-              <img src={personalImg} alt="" style={{ borderRadius: 5 }}></img>
+              <img
+                src={personalImg}
+                className="img-fluid"
+                alt=""
+                style={{ borderRadius: 5 }}
+              ></img>
             </Col>
             <Col className="about-story" lg={4} md={12}>
               <p

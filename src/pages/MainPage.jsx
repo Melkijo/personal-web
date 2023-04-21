@@ -94,8 +94,8 @@ export default function MainPage() {
                 </div>
               </div>
             </div>
-            <div className="col text-center">
-              <img src={HeroImage} className="hero-img" />
+            <div className="col-6 col-sm-12 text-center">
+              <img src={HeroImage} className="img-fluid" />
             </div>
           </div>
         </Container>
@@ -325,6 +325,7 @@ export default function MainPage() {
                     fontSize: 42,
                     fontWeight: 800,
                     color: "white",
+                    textDecoration: "none",
                   }}
                 >
                   <span style={{ color: "#01CC8E" }}>MEJO</span>DEV.
