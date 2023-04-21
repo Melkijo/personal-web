@@ -55,7 +55,7 @@ export default function MainPage() {
         <NavbarComp />
         <Container>
           <div className="row flex-wrap-reverse">
-            <div className="col" style={{ marginTop: "50px" }}>
+            <div className="col-lg-6 col-sm-12" style={{ marginTop: "50px" }}>
               <p className="hero-title-name">
                 Hai 👋, I’m Melki Jonathan{" "}
                 <span className="hero-title-job">{titles}</span>
@@ -94,7 +94,7 @@ export default function MainPage() {
                 </div>
               </div>
             </div>
-            <div className="col-6 col-sm-12 text-center">
+            <div className="col-lg-6 col-sm-12 text-center">
               <img src={HeroImage} className="img-fluid" />
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function MainPage() {
               <p
                 style={{
                   fontWeight: 600,
-                  fontSize: "24px",
+                  fontSize: "18px",
                   marginBottom: "10px",
                 }}
               >
