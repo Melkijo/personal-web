@@ -1,0 +1,86 @@
+.hero-section {
+    padding: 125px 0 50px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.hero-title-name {
+    color: rgb(1, 204, 142);
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.hero-title-job {
+    font-size: 1.5rem;
+    background-color: rgb(1, 204, 142);
+    color: "white";
+    padding: 3px 15px;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.hero-img {
+    width: 500px;
+}
+
+.title-section {
+    font-weight: 800;
+}
+
+.port-img {
+    transition: .5s ease;
+
+}
+
+.port-img:hover {
+    cursor: pointer;
+    opacity: 0.3;
+
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-title-name {
+        font-size: 1.4rem;
+
+    }
+
+    .hero-title-job {
+        font-size: 1.2rem;
+    }
+
+    .hero-img {
+        width: 350px;
+    }
+
+    .port-item {
+        width: 450px;
+        padding: 0 25px;
+    }
+
+    .about-img {
+        order: 1;
+    }
+
+    .about-story {
+        order: 2;
+    }
+
+    .about-activity {
+        order: 3;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-around;
+    }
+}
