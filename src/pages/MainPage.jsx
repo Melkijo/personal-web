@@ -1,7 +1,7 @@
 import NavbarComp from "../components/NavbarComp";
 import "./MainPage.css";
 import HeroImage from "../assets/img/heroImg.svg";
-import { portfolios, testimonials } from "../dataList";
+import { portfolios, testimonials } from "../components/dataList";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
