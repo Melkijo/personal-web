@@ -106,7 +106,7 @@ export default function MainPage() {
         style={{
           backgroundColor: "#272936",
           textAlign: "center",
-          padding: "50px 0",
+          padding: "50px 0 0",
         }}
       >
         <Container>
@@ -114,18 +114,16 @@ export default function MainPage() {
             My <span style={{ color: "#01CC8E" }}>Portfolio</span>
           </h2>
           <p className="mb-4">Good product born from good designer</p>
-          <Row className="m-0 justify-content-center px-5">
+          <Row className="m-0 justify-content-center">
             {portfolios.map((portfolio) => (
               <Col key={portfolio.id} lg={6} className="mb-5">
-                <div>
-                  <div className="container-port-img">
-                    <img
-                      src={portfolio.image}
-                      className="port-img img-fluid"
-                      alt=""
-                      style={{ borderRadius: "5px" }}
-                    />
-                  </div>
+                <div className="port-item">
+                  <img
+                    src={portfolio.image}
+                    className="port-img img-fluid"
+                    alt=""
+                    style={{ borderRadius: "5px" }}
+                  />
 
                   <div
                     className="port-detail d-flex align-items-center"
@@ -168,7 +166,7 @@ export default function MainPage() {
         <p className="mb-4">Good Product born from good designer</p>
 
         <Container>
-          <Row>
+          <Row className="px-3">
             {testimonials.map((testimonial) => (
               <Col key={testimonial.id} lg={4} md={12}>
                 <div
@@ -220,13 +218,9 @@ export default function MainPage() {
                 Connect with <span style={{ color: "#01CC8E" }}>Me</span>
               </p>
               <p>
-                Anda telah datang ke tempat yang tepat! Saya menawarkan jasa
-                pembuatan website yang terjangkau dan berkualitas tinggi untuk
-                membantu meningkatkan online presence bisnis Anda. Segera
-                hubungi saya dan kita bisa berdiskusi lebih lanjut tentang
-                bagaimana saya bisa membantu Anda mencapai tujuan online Anda.
-                Terima kasih telah mengunjungi website saya dan saya sangat
-                berharap dapat bekerja sama dengan Anda!"
+                Segera hubungi saya dan kita bisa berdiskusi lebih lanjut
+                tentang bagaimana saya bisa membantu Anda mencapai tujuan online
+                Anda.
               </p>
             </Col>
             <Col lg={6}>
@@ -323,47 +317,45 @@ export default function MainPage() {
       >
         <Container>
           <Row>
-            <Col lg={4} md={12} className="mb-5">
+            <Col lg={4} className="mb-5">
               <div>
                 <a
-                  href="#"
+                  href="#home"
                   style={{
                     fontSize: 42,
                     fontWeight: 800,
                     color: "white",
-                    textDecoration: "none",
                   }}
                 >
-                  <span style={{ color: "#01CC8E" }}>MEJO</span>TECH
+                  <span style={{ color: "#01CC8E" }}>MEJO</span>DEV.
                 </a>
               </div>
               <p className="m-0">With Great Power Comes Great Responsibility</p>
             </Col>
-            <Col lg={2} md={6} className="mb-5">
+            <Col lg={2} sm={6} xs={6} className="mb-5">
               <h5>Navigation</h5>
               <div className="mt-3">
-                <a href="" style={{ color: "white" }}>
+                <a href="#home" style={{ color: "white" }}>
                   Home
                 </a>{" "}
               </div>
               <div className="mt-3">
-                <a href="" style={{ color: "white" }}>
+                <a href="#portfolio" style={{ color: "white" }}>
                   Portfolio
                 </a>{" "}
               </div>
               <div className="mt-3">
-                <a href="" style={{ color: "white" }}>
+                <a href="#about" style={{ color: "white" }}>
                   About
                 </a>{" "}
               </div>
             </Col>
-            <Col lg={3} md={6} className="mb-5">
+            <Col lg={3} sm={6} xs={6} className="mb-5">
               {" "}
               <h5>Social Media</h5>
               <div
                 style={{
                   display: "flex",
-                  alignItems: "end",
                   gap: 20,
                   marginTop: 15,
                 }}
@@ -382,19 +374,17 @@ export default function MainPage() {
             <Col lg={3} md={12}>
               <h5>My Contact</h5>
               <div
-                style={{ display: "flex", flexDirection: "column", gap: 20 }}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "15px",
+                  marginTop: 15,
+                }}
               >
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10,
-                    marginTop: 10,
-                  }}
-                >
+                <div>
                   <p className="m-0">+6281 7752 62221</p>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <div>
                   <p className="m-0">Jln Melati Raya Blok K No 31 BTN Sweta</p>
                 </div>
               </div>

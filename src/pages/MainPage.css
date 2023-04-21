@@ -33,6 +33,10 @@
     font-weight: 800;
 }
 
+.port-item {
+    padding: 0 25px;
+}
+
 .port-img {
     transition: .5s ease;
 
@@ -50,25 +54,25 @@
     }
 
     .hero-title-name {
-        font-size: 1rem;
+        font-size: 1.1rem;
 
     }
 
     .hero-title-job {
-        font-size: 1rem;
-    }
-
-    .hero-img {
-        width: 350px;
+        font-size: 1.1rem;
     }
 
     .port-item {
-        width: 450px;
-        padding: 0 25px;
+        padding: 0;
     }
 
     .about-img {
         order: 1;
+    }
+
+    .about-img img {
+        width: 470px;
+        margin-bottom: 20px;
     }
 
     .about-story {

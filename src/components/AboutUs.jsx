@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import personalImg from "../assets/img/persona.png";
+import personalImg from "../assets/img/persona1.svg";
 export default function AboutUs() {
   return (
     <>
@@ -10,7 +10,7 @@ export default function AboutUs() {
         id="about"
         style={{
           backgroundColor: " #373B4C",
-          padding: "50px 0",
+          padding: "50px 15px",
         }}
       >
         <h2 className="title-section mb-4 text-center">
@@ -40,7 +40,7 @@ export default function AboutUs() {
               </ul>
             </Col>
             <Col className="text-center about-img" lg={4} md={12}>
-              <img src={personalImg} alt=""></img>
+              <img src={personalImg} alt="" style={{ borderRadius: 5 }}></img>
             </Col>
             <Col className="about-story" lg={4} md={12}>
               <p
