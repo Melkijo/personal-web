@@ -1,5 +1,10 @@
 .hero-section {
     padding: 125px 0 50px;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/mejo-personal-web.appspot.com/o/Frame%2049.png?alt=media&token=c6a4864b-ccbd-452c-bd86-5f7e9e9b5bed");
+    background-size: cover;
+    /* Adjust to "contain" if needed */
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .hero-title {
