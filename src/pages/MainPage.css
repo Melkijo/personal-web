@@ -1,6 +1,6 @@
 .hero-section {
     padding: 125px 0 50px;
-    background-image: url('../assets/img/hero-bg.png');
+    background-image: url('/src/assets/img/hero-bg.png');
     background-size: cover;
     /* Adjust to "contain" if needed */
     background-repeat: no-repeat;
