@@ -11,6 +11,11 @@ import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import AboutUs from "../components/AboutUs";
 import { motion } from "framer-motion";
+import LinkedinIcon from "../assets/img/linkedinIcon.png";
+import InstagramIcon from "../assets/img/instagramIcon.png";
+import DribbbleIcon from "../assets/img/dribbbleIcon.png";
+import BehanceIcon from "../assets/img/behanceIcon.png";
+
 export default function MainPage() {
    const [firstName, setFirstName] = useState("");
    const [lastName, setLastName] = useState("");
@@ -192,17 +197,46 @@ export default function MainPage() {
                      <p
                         style={{
                            fontWeight: 600,
-                           fontSize: "18px",
+                           fontSize: "1.5rem",
                            marginBottom: "10px",
                         }}
                      >
-                        Connect with{" "}
-                        <span style={{ color: "#01CC8E" }}>Me</span>
+                        Hello
+                        <span style={{ color: "#01CC8E" }}> there! 👋</span>
                      </p>
                      <p>
-                        Segera hubungi saya dan kita bisa berdiskusi lebih
-                        lanjut tentang bagaimana saya bisa membantu Anda
-                        mencapai tujuan online Anda.
+                        I'm here to collaborate or chat with you. Share your
+                        ideas or projects, and I'll contribute where I can. Feel
+                        free to react out for collaborations or just a friendly
+                        hello!
+                        <div
+                           style={{ display: "flex", gap: 20, marginTop: 25 }}
+                        >
+                           <a
+                              href="https://www.linkedin.com/in/melki-jonathan"
+                              target="_blank"
+                           >
+                              <img src={LinkedinIcon} alt="" width={40} />
+                           </a>
+                           <a
+                              href="https://www.instagram.com/melkijo/"
+                              target="_blank"
+                           >
+                              <img src={InstagramIcon} alt="" width={38} />
+                           </a>
+                           <a
+                              href="https://dribbble.com/melkijo"
+                              target="_blank"
+                           >
+                              <img src={DribbbleIcon} alt="" width={34} />
+                           </a>
+                           <a
+                              href="https://www.behance.net/jonathanandaraa"
+                              target="_blank"
+                           >
+                              <img src={BehanceIcon} alt="" width={34} />
+                           </a>
+                        </div>
                      </p>
                   </Col>
                   <Col lg={6}>
@@ -274,7 +308,7 @@ export default function MainPage() {
                               border: "none",
                               padding: "10px 17px",
                               fontWeight: 600,
-                              marginRight: "20px",
+                              marginTop: "10px",
                            }}
                            type="submit"
                         >
