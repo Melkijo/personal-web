@@ -28,7 +28,10 @@ export default function AboutUs() {
                         }}
                      >
                         My
-                        <span style={{ color: "#01CC8E" }}> Activity</span>{" "}
+                        <span style={{ color: "#01CC8E" }}>
+                           {" "}
+                           Experience
+                        </span>{" "}
                      </p>
                      <ul>
                         <li>
@@ -70,11 +73,12 @@ export default function AboutUs() {
                      <p>
                         my name is Melki Jonathan Andara. Currently, I am
                         pursuing my education at Mataram University and I am in
-                        the 6th semester of the Computer Science program. I have
-                        a deep interest in the field of technology because it
-                        offers knowledge that can be applied in various domains.
-                        I aspire to become a software engineer who can assist
-                        others in solving their problems through technology.
+                        the 6th semester of the Informatics Engineering program.
+                        I have a deep interest in the field of technology
+                        because it offers knowledge that can be applied in
+                        various domains. I aspire to become a software engineer
+                        who can assist others in solving their problems through
+                        technology.
                      </p>
                   </Col>
                </Row>

@@ -1,7 +1,7 @@
 import NavbarComp from "../components/NavbarComp";
 import "./MainPage.css";
-import HeroImage from "../assets/img/heroImg.svg";
-import { portfolios, testimonials } from "../components/dataList";
+import HeroImage from "../assets/img/heroImg-Cmpres.png";
+import { portfolios } from "../components/dataList";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -19,6 +19,13 @@ export default function MainPage() {
 
    const jobs = ["Student", "Frontend Web", "UI/UX Designer"];
    const [titles, setTitle] = useState(jobs[0]);
+
+   useEffect(() => {
+      const intervalId = setInterval(() => {
+         setTitle(jobs[Math.floor(Math.random() * 3)]);
+      }, 1000);
+      return () => clearInterval(intervalId);
+   }, []);
 
    const handleOnSubmit = (e) => {
       e.preventDefault();
@@ -61,10 +68,10 @@ export default function MainPage() {
                         Students of Informatics Engineering University of
                         Mataram
                      </p>
-                     <p style={{ fontSize: "1.2rem", fontWeight: 300 }}>
-                        Order your website today and start competing in the
-                        online marketplace take advantage of this amazing
-                        opportunity!{" "}
+                     <p style={{ fontSize: "1.12rem", fontWeight: 300 }}>
+                        Design and code converge in the hands of student
+                        innovators, crafting limitless possibilities for visual
+                        experiences and functional solutions.
                      </p>
                      <div className="row row-cols-auto align-items-center mt-3">
                         <div className="col">
@@ -125,85 +132,47 @@ export default function MainPage() {
                <Row className="m-0 justify-content-center">
                   {portfolios.map((portfolio) => (
                      <Col key={portfolio.id} lg={6} className="mb-5">
-                        <div className="port-item">
-                           <img
-                              src={portfolio.image}
-                              className="port-img img-fluid"
-                              alt=""
-                              style={{ borderRadius: "5px" }}
-                           />
+                        <a
+                           href={portfolio.url}
+                           style={{ color: "white" }}
+                           target="_blank"
+                        >
+                           <motion.div>
+                              <img
+                                 src={portfolio.image}
+                                 className="port-img img-fluid"
+                                 alt=""
+                                 style={{ borderRadius: "5px" }}
+                              />
 
-                           <div
-                              className="port-detail d-flex align-items-center"
-                              style={{ justifyContent: "space-between" }}
-                           >
-                              <div>
-                                 <a
-                                    href="https://www.behance.net/search/projects?search=portfolio+website+design&tracking_source=typeahead_nav_recent_suggestion"
-                                    style={{ color: "white" }}
-                                 >
-                                    View Detail
-                                 </a>
+                              <div
+                                 className=" d-flex align-items-center"
+                                 style={{ justifyContent: "space-between" }}
+                              >
+                                 <div>{portfolio.name}</div>
+                                 <div>Live Demo</div>
                               </div>
-                              <div className="mt-0">
-                                 <img
-                                    src="./src/assets/img/figma2.svg"
-                                    style={{ width: 40 }}
-                                    alt=""
-                                 />
-                              </div>
-                           </div>
-                        </div>
+                           </motion.div>
+                        </a>
                      </Col>
                   ))}
                </Row>
+               <a
+                  href="https://github.com/Melkijo?tab=repositories"
+                  target="_blank"
+               >
+                  {" "}
+                  <button
+                     type="button"
+                     className="btn btn-outline-success mb-5"
+                     style={{ color: "#01CC8E", borderColor: "#01CC8E" }}
+                  >
+                     {" "}
+                     See More...
+                  </button>
+               </a>
             </Container>
          </div>
-
-         {/* <div
-            className="testimonial-section"
-            style={{
-               backgroundColor: "#272936",
-               textAlign: "center",
-               padding: "50px 0",
-            }}
-         >
-            <h2 className="title-section">
-               What My <span style={{ color: "#01CC8E" }}>Client</span> Say
-            </h2>
-            <p className="mb-4">Good Product born from good designer</p>
-
-            <Container>
-               <Row className="px-3">
-                  {testimonials.map((testimonial) => (
-                     <Col key={testimonial.id} lg={4} md={12}>
-                        <div
-                           className="testimonial-item"
-                           style={{
-                              border: "#01CC8E 3px solid",
-                              borderRadius: 5,
-                              padding: 35,
-                              margin: "15px 0",
-                           }}
-                        >
-                           <img src={testimonial.image} alt="" />
-                           <p
-                              className="mt-3"
-                              style={{
-                                 fontWeight: "600",
-                                 fontSize: "18px",
-                                 margin: 0,
-                              }}
-                           >
-                              {testimonial.name}
-                           </p>
-                           <p>{testimonial.comment}</p>
-                        </div>
-                     </Col>
-                  ))}
-               </Row>
-            </Container>
-         </div> */}
 
          <AboutUs />
 
@@ -241,20 +210,10 @@ export default function MainPage() {
                         onSubmit={(e) => handleOnSubmit(e)}
                         style={{
                            backgroundColor: "#272936",
-                           padding: "15px 35px",
+                           padding: "30px 35px",
                            borderRadius: "5px",
                         }}
                      >
-                        <p
-                           style={{
-                              fontWeight: 600,
-                              fontSize: "24px",
-                              marginBottom: "10px",
-                           }}
-                        >
-                           Let's make something
-                           <span style={{ color: "#01CC8E" }}> crazy</span>{" "}
-                        </p>{" "}
                         <Row>
                            <Col>
                               <Form.Group
@@ -405,7 +364,7 @@ export default function MainPage() {
                         </div>
                         <div>
                            <p className="m-0">
-                              Jln Melati Raya Blok K No 31 BTN Sweta
+                              Mataram, Nusa Tenggara Barat, Indonesian
                            </p>
                         </div>
                      </div>

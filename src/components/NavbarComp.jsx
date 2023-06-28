@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./NavbarComp.css";
 import { useState, useEffect } from "react";
-
+import Github from "../assets/img/github.png";
 export default function NavbarComp() {
    const [isSticky, setIsSticky] = useState(false);
 
@@ -24,8 +24,8 @@ export default function NavbarComp() {
    }, []);
    return (
       <Navbar
-         //  expand="lg"
-         //  className="navbar-dark"
+         expand="lg"
+         className="navbar-dark"
          fixed={"top"}
          style={{ backgroundColor: isSticky ? "#373B4C" : "" }}
       >
@@ -39,8 +39,12 @@ export default function NavbarComp() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                <Nav
-                  className="ms-auto gap-3 text-center"
-                  style={{ fontSize: 18 }}
+                  className="ms-auto gap-3 text-center "
+                  style={{
+                     fontSize: 18,
+                     display: "flex",
+                     alignItems: "center",
+                  }}
                >
                   <Nav.Link href="#home" style={{ color: "white" }}>
                      Home
@@ -50,6 +54,13 @@ export default function NavbarComp() {
                   </Nav.Link>
                   <Nav.Link href="#about" style={{ color: "white" }}>
                      About
+                  </Nav.Link>
+                  <Nav.Link
+                     href="https://github.com/Melkijo"
+                     style={{ color: "white" }}
+                     target="_blank"
+                  >
+                     <img src={Github} width={35} />
                   </Nav.Link>
                </Nav>
             </Navbar.Collapse>
