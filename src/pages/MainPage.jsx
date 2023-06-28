@@ -340,9 +340,7 @@ export default function MainPage() {
                            <span style={{ color: "#01CC8E" }}>MEJO</span>DEV.
                         </a>
                      </div>
-                     <p className="m-0">
-                        With Great Power Comes Great Responsibility
-                     </p>
+                     <p className="m-0">Improvise, Adapt, Overcome</p>
                   </Col>
                   <Col lg={2} sm={6} xs={6} className="mb-5">
                      <h5>Navigation</h5>
@@ -394,7 +392,7 @@ export default function MainPage() {
                         }}
                      >
                         <div>
-                           <p className="m-0">+6281 7752 62221</p>
+                           <p className="m-0">melkijonathan2@gmail.com</p>
                         </div>
                         <div>
                            <p className="m-0">
