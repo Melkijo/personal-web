@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import personalImg from "/assets/img/persona1.png";
+import personalImg from "../assets/img/persona.png";
 export default function AboutUs() {
    return (
       <>
