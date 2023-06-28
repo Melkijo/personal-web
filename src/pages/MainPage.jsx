@@ -1,6 +1,6 @@
 import NavbarComp from "../components/NavbarComp";
 import "./MainPage.css";
-import HeroImage from "../assets/img/heroImg-Cmpres.png";
+import HeroImage from "../assets/img/heroImg.png";
 import { portfolios } from "../components/dataList";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
