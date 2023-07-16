@@ -57,7 +57,11 @@ export default function MainPage() {
    };
    return (
       <>
-         <div className="hero-section" id="home">
+         <div
+            className="hero-section"
+            id="home"
+            style={{ fontFamily: "poppins" }}
+         >
             <NavbarComp />
             <Container>
                <div className="row flex-wrap-reverse">
