@@ -15,7 +15,7 @@ import LinkedinIcon from "../assets/img/linkedinIcon.png";
 import InstagramIcon from "../assets/img/instagramIcon.png";
 import DribbbleIcon from "../assets/img/dribbbleIcon.png";
 import BehanceIcon from "../assets/img/behanceIcon.png";
-
+import cv from "../assets/file/cv_MelkiJonathanAndara.pdf";
 export default function MainPage() {
    const [firstName, setFirstName] = useState("");
    const [lastName, setLastName] = useState("");
@@ -100,7 +100,7 @@ export default function MainPage() {
                            </a>
 
                            <a
-                              href="https://drive.google.com/drive/folders/1eXBgidvfvXeNtLSkNd3lw_YTtlfgY7B4?usp=sharing"
+                              href={cv}
                               target="_blank"
                               style={{ color: "white" }}
                            >
@@ -374,14 +374,18 @@ export default function MainPage() {
                            marginTop: 15,
                         }}
                      >
-                        <a href="">
-                           <i className="fa-brands fa-instagram fa-2x" />
+                        <a
+                           href="https://www.instagram.com/melkijo/"
+                           target="_blank"
+                        >
+                           <img src={InstagramIcon} alt="" width={38} />
                         </a>
-                        <a href="">
-                           <i className="fa-brands fa-square-behance fa-2x" />
-                        </a>
-                        <a href="">
-                           <i className="fa-brands fa-youtube fa-2x" />
+
+                        <a
+                           href="https://www.linkedin.com/in/melki-jonathan"
+                           target="_blank"
+                        >
+                           <img src={LinkedinIcon} alt="" width={40} />
                         </a>
                      </div>
                   </Col>
