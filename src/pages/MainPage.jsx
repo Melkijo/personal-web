@@ -43,16 +43,24 @@ export default function MainPage() {
       ) {
          Swal.fire("All input required");
       } else {
-         Swal.fire({
-            icon: "success",
-            title: `Thank You ${firstName} ${lastName}`,
-            text: "We will quickly review and respond to the message 😊",
-            width: "24rem",
+         const data = new FormData(e.target);
+         const action = e.target.action;
+         fetch(action, {
+            method: "POST",
+            body: data,
+         }).then(() => {
+            Swal.fire({
+               icon: "success",
+               title: `Thank You ${firstName} ${lastName}`,
+               text: "We will quickly review and respond to the message 😊",
+               width: "24rem",
+            });
+
+            setFirstName("");
+            setLastName("");
+            setEmail("");
+            setComment("");
          });
-         setFirstName("");
-         setLastName("");
-         setEmail("");
-         setComment("");
       }
    };
    return (
@@ -245,6 +253,8 @@ export default function MainPage() {
                   </Col>
                   <Col lg={6}>
                      <Form
+                        method="POST"
+                        action={import.meta.env.VITE_GOOGLE_SHEET}
                         onSubmit={(e) => handleOnSubmit(e)}
                         style={{
                            backgroundColor: "#272936",
@@ -263,6 +273,7 @@ export default function MainPage() {
                                     type="text"
                                     placeholder="first name"
                                     value={firstName}
+                                    name="firstName"
                                     onChange={(e) => {
                                        setFirstName(e.target.value);
                                     }}
@@ -276,6 +287,7 @@ export default function MainPage() {
                                     type="text"
                                     placeholder="Last name"
                                     value={lastName}
+                                    name="lastName"
                                     onChange={(e) => {
                                        setLastName(e.target.value);
                                     }}
@@ -289,6 +301,7 @@ export default function MainPage() {
                               type="email"
                               placeholder="example@email.co"
                               value={email}
+                              name="email"
                               onChange={(e) => {
                                  setEmail(e.target.value);
                               }}
@@ -301,6 +314,7 @@ export default function MainPage() {
                               placeholder="Leave a comment here"
                               style={{ height: "100px" }}
                               value={comment}
+                              name="comment"
                               onChange={(e) => {
                                  setComment(e.target.value);
                               }}
