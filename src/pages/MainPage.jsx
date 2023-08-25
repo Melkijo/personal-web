@@ -254,7 +254,7 @@ export default function MainPage() {
                   <Col lg={6}>
                      <Form
                         method="POST"
-                        action={import.meta.env.VITE_GOOGLE_SHEET}
+                        action="https://script.google.com/macros/s/AKfycbysyr74i8NxqbZrhkdUed-3IEVCHesRPaZt_B3txo7LW4GsKqN4tt6DOlQ4zcAvCxc8/exec"
                         onSubmit={(e) => handleOnSubmit(e)}
                         style={{
                            backgroundColor: "#272936",
