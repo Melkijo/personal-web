@@ -8,7 +8,7 @@ export const portfolios = [
       id: 1,
       name: "BeasiswaKita",
       image: port1,
-      url: "https://mini-project-alterra-sigma.vercel.app/ ",
+      url: "https://beasiswakita.vercel.app/ ",
    },
    {
       id: 2,

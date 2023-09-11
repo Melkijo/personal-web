@@ -154,7 +154,14 @@ export default function MainPage() {
                            style={{ color: "white" }}
                            target="_blank"
                         >
-                           <motion.div>
+                           <motion.div
+                              initial={{ opacity: 0, translateY: 100 }}
+                              whileInView={{
+                                 opacity: 1,
+                                 translateY: 20,
+                                 transitionDelay: 0.9,
+                              }}
+                           >
                               <img
                                  src={portfolio.image}
                                  className="port-img img-fluid"
@@ -221,7 +228,7 @@ export default function MainPage() {
                         ideas or projects, and I'll contribute where I can. Feel
                         free to react out for collaborations or just a friendly
                         hello!
-                        <div
+                        {/* <div
                            style={{ display: "flex", gap: 20, marginTop: 25 }}
                         >
                            <a
@@ -248,7 +255,7 @@ export default function MainPage() {
                            >
                               <img src={BehanceIcon} alt="" width={34} />
                            </a>
-                        </div>
+                        </div> */}
                      </p>
                   </Col>
                   <Col lg={6}>
