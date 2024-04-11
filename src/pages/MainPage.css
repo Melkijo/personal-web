@@ -13,10 +13,11 @@
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 900;
     letter-spacing: 0.03em;
     margin: 0;
+
 }
 
 .hero-title-name {
@@ -60,16 +61,19 @@
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .hero-title-name {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 15px;
 
     }
 
     .hero-title-job {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 3px 7px;
+
     }
 
     .port-item {
